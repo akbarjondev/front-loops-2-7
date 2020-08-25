@@ -41,6 +41,16 @@
 *::after {
   box-sizing: inherit;
 }
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
 
 /*main*/
 .press-article-box {
@@ -55,7 +65,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 45%;
+  width: 48%;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                     url("../img/o-background.jpg");
   background-repeat: no-repeat;
@@ -96,3 +106,91 @@
     -webkit-background-size: 25px;
     background-size: 25px;
   }
+.box__right {
+  flex-grow: 1;
+  width: 52%;
+  padding: 30px;
+}
+.right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.right__heading {
+  margin: 0;
+  font-weight: 500;
+}
+.right__burger {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.burger-img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/menu.svg");
+}
+.years-wrapper {
+  overflow-x: scroll;
+}
+.years-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.years-item {
+  margin-right: 35px;
+}
+.years-link {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.articles-list {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.articles-item {
+  margin-bottom: 15px;
+}
+.articles-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
+.article-avatar {
+  border-radius: 50%;
+}
+.article-text {
+  flex-grow: 1;
+  margin-left: 15px;
+}
+.time-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 100;
+}
+.time-wrapper-right {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.time-month {
+  font-weight: 700;
+}
