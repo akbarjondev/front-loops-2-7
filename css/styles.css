@@ -95,7 +95,11 @@
   color: #ffffff;
   background-color: rgba(105, 166, 149, 0.8);
   border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
+  .box__mediakit:hover {
+    background-color: rgba(105, 166, 149, 1);
+  }
   .box__mediakit::before {
     content: "";
     width: 25px;
@@ -146,12 +150,19 @@
 .years-item {
   margin-right: 35px;
 }
+.active .years-link {
+  color: #000000;
+}
 .years-link {
   font-size: 20px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+  .years-link:hover {
+    color: #000000;
+  }
 .articles-list {
   display: flex;
   flex-direction: column-reverse;
