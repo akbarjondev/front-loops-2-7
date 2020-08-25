@@ -139,7 +139,17 @@
   background-image: url("../img/menu.svg");
 }
 .years-wrapper {
+  position: relative;
   overflow-x: scroll;
+  padding: 10px 0;
+}
+.box-shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset -36px 0px 21px -4px rgba(255, 255, 255, 0.9);
 }
 .years-list {
   display: flex;
@@ -148,7 +158,7 @@
   list-style-type: none;
 }
 .years-item {
-  margin-right: 35px;
+  margin-right: 40px;
 }
 .active .years-link {
   color: #000000;
@@ -171,7 +181,7 @@
   list-style-type: none;
 }
 .articles-item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .articles-link {
   display: flex;
