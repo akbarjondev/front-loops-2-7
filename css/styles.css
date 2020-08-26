@@ -52,6 +52,37 @@
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  opacity: 0;
+}
+::-webkit-scrollbar-track {
+  opacity: 0;
+}
+::-webkit-scrollbar-thumb {
+  opacity: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  opacity: 0;
+}
+::-moz-scrollbar {
+  opacity: 0;
+}
+::-moz-scrollbar-track {
+  opacity: 0;
+}
+::-moz-scrollbar-thumb {
+  opacity: 0;
+}
+::-moz-scrollbar-thumb:hover {
+  opacity: 0;
+}
+::-moz-scrollbar-thumb:window-inactive {
+  opacity: 0;
+}
+
 /*main*/
 .press-article-box {
   display: flex;
@@ -140,25 +171,32 @@
 }
 .years-wrapper {
   position: relative;
-  overflow-x: scroll;
-  padding: 10px 0;
+  width: 438px;
+  z-index: 1;
+  overflow-x: auto;
 }
-.box-shadow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  box-shadow: inset -36px 0px 21px -4px rgba(255, 255, 255, 0.9);
-}
+  .years-wrapper::after {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0));
+    content: "";
+  }
 .years-list {
+  position: relative;
+  z-index: 1;
   display: flex;
-  margin: 0;
+  width: 100%;
+  overflow: auto;
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 .years-item {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 .active .years-link {
   color: #000000;
@@ -173,12 +211,17 @@
   .years-link:hover {
     color: #000000;
   }
+.right__body {
+  height: 350px;
+}
 .articles-list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  height: 100%;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow: auto;
 }
 .articles-item {
   margin-bottom: 10px;
